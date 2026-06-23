@@ -1,0 +1,6 @@
+{
+  "name": "Evolve",
+  "description": "Ecommerce Innovation Agency for Visionary Brands",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

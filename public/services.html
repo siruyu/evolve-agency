@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Evolve</title>
+  <meta name="description" content="Made in Evolve | Services">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-percentage">00</div>
+    <div class="loader-text">Experience Loading</div>
+    <div class="loader-sub">hello there</div>
+  </div>
+
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <a href="index.html" class="logo-link">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Evolve</span>
+      </a>
+      <span class="top-bar-email">
+        saha.rik2006@gmail.com
+        <span class="email-tooltip">Click to copy email</span>
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <div class="lang-switcher">
+        <a href="services.html" class="active">EN</a>
+        <span style="color:rgba(255,255,255,0.3)">/</span>
+        <a href="#">IT</a>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu-overlay">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contacts.html">Contacts</a>
+    <div class="menu-overlay-email">saha.rik2006@gmail.com</div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="services-hero">
+    <div class="hero-tags">
+      <span class="hero-tag">Brand Direction</span>
+      <span class="hero-tag">Performance Marketing</span>
+      <span class="hero-tag">Advanced Tech</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="line"><span>Design you can</span></span>
+      <span class="line"><span>feel. Art you</span></span>
+      <span class="line"><span>can</span></span>
+      <span class="line"><span>use.</span></span>
+    </h1>
+  </section>
+
+  <!-- Image -->
+  <section class="section" style="padding:0;">
+    <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:#111;cursor:pointer;" id="serviceHeroWrapper">
+      <video loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;" id="serviceHeroVideo">
+        <source src="https://res.cloudinary.com/dv9ndle5u/video/upload/v1782195744/evolve-media/vid.mp4" type="video/mp4">
+      </video>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity 0.3s;pointer-events:none;" id="serviceHeroPlayBtn">
+        <div style="width:6rem;height:6rem;border-radius:50%;border:0.1rem solid rgba(255,255,255,0.8);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);background:rgba(0,0,0,0.2);">
+          <div style="width:0;height:0;border-left:1.8rem solid #fff;border-top:1.2rem solid transparent;border-bottom:1.2rem solid transparent;margin-left:0.4rem;" id="serviceHeroPlayIcon"></div>
+        </div>
+      </div>
+      <div style="position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;gap:1.5rem;padding:1rem 2rem;background:linear-gradient(transparent,rgba(0,0,0,0.7));opacity:0;transition:opacity 0.3s;" id="serviceHeroControls">
+        <button style="background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;z-index:2;" id="serviceHeroPlayToggle" aria-label="Play/Pause">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" id="serviceHeroPlayPauseIcon">
+            <polygon points="6,3 20,12 6,21" />
+          </svg>
+        </button>
+        <div style="flex:1;height:0.3rem;background:rgba(255,255,255,0.2);border-radius:0.15rem;position:relative;" id="serviceHeroProgress">
+          <div style="width:0%;height:100%;background:#fff;border-radius:0.15rem;" id="serviceHeroProgressBar"></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:0.8rem;">
+          <button style="background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;" id="serviceHeroMuteToggle" aria-label="Mute/Unmute">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" id="serviceHeroVolumeIcon">
+              <polygon points="11,5 6,9 2,9 2,15 6,15 11,19" />
+              <path d="M15.5 8.5c2 2 2 5 0 7" />
+              <path d="M18.5 5.5c4 4 4 10 0 14" />
+            </svg>
+          </button>
+          <input type="range" min="0" max="1" step="0.01" value="1" style="width:6rem;height:0.3rem;appearance:none;background:rgba(255,255,255,0.2);border-radius:0.15rem;outline:none;cursor:pointer;accent-color:#fff;" id="serviceHeroVolume">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    (function(){
+      var v = document.getElementById('serviceHeroVideo');
+      var w = document.getElementById('serviceHeroWrapper');
+      var pb = document.getElementById('serviceHeroPlayBtn');
+      var pt = document.getElementById('serviceHeroPlayToggle');
+      var pp = document.getElementById('serviceHeroPlayPauseIcon');
+      var pr = document.getElementById('serviceHeroProgressBar');
+      var mt = document.getElementById('serviceHeroMuteToggle');
+      var vi = document.getElementById('serviceHeroVolumeIcon');
+      var vl = document.getElementById('serviceHeroVolume');
+      var ct = document.getElementById('serviceHeroControls');
+      var timer;
+
+      function toggle() {
+        if (v.paused) {
+          v.play();
+        } else {
+          v.pause();
+        }
+      }
+
+      function updateUI() {
+        if (v.paused) {
+          pb.style.opacity = '1';
+          pp.innerHTML = '<polygon points="6,3 20,12 6,21"/>';
+        } else {
+          pb.style.opacity = '0';
+          pp.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+        }
+        pr.style.width = (v.duration ? (v.currentTime / v.duration * 100) : 0) + '%';
+      }
+
+      function showControls() {
+        ct.style.opacity = '1';
+        clearTimeout(timer);
+      }
+
+      function hideControls() {
+        if (!v.paused) {
+          timer = setTimeout(function() { ct.style.opacity = '0'; }, 2000);
+        }
+      }
+
+      w.addEventListener('click', function() { toggle(); });
+      w.addEventListener('mouseenter', showControls);
+      w.addEventListener('mouseleave', hideControls);
+      ct.addEventListener('mouseenter', showControls);
+      ct.addEventListener('mouseleave', hideControls);
+
+      pt.addEventListener('click', function(e) { e.stopPropagation(); toggle(); });
+      mt.addEventListener('click', function(e) { e.stopPropagation(); v.muted = !v.muted; updateVolumeIcon(); });
+
+      v.addEventListener('play', updateUI);
+      v.addEventListener('pause', updateUI);
+      v.addEventListener('timeupdate', function() {
+        pr.style.width = (v.duration ? (v.currentTime / v.duration * 100) : 0) + '%';
+      });
+
+      vl.addEventListener('input', function(e) {
+        e.stopPropagation();
+        v.volume = parseFloat(this.value);
+        v.muted = false;
+        updateVolumeIcon();
+      });
+
+      function updateVolumeIcon() {
+        var vol = v.muted ? 0 : v.volume;
+        if (vol === 0) {
+          vi.innerHTML = '<polygon points="11,5 6,9 2,9 2,15 6,15 11,19"/><line x1="3" y1="3" x2="21" y2="21"/>';
+        } else if (vol < 0.5) {
+          vi.innerHTML = '<polygon points="11,5 6,9 2,9 2,15 6,15 11,19"/><path d="M15.5 8.5c2 2 2 5 0 7"/>';
+        } else {
+          vi.innerHTML = '<polygon points="11,5 6,9 2,9 2,15 6,15 11,19"/><path d="M15.5 8.5c2 2 2 5 0 7"/><path d="M18.5 5.5c4 4 4 10 0 14"/>';
+        }
+        vl.value = v.muted ? 0 : v.volume;
+      }
+      v.addEventListener('volumechange', updateVolumeIcon);
+      updateVolumeIcon();
+      updateUI();
+    })();
+  </script>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">( SERVICES )</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem;">
+        <p class="text-medium">
+          Art, design, technology, marketing and data often operate separately.
+          The result is fragmentation and inefficiency. Evolve was created to change that.
+          We design digital ecosystems where strategy, design, development and performance
+          marketing work as one integrated system.
+        </p>
+        <p class="text-medium">
+          We don&rsquo;t add complexity. We build structures that make Visual arts simpler,
+          more efficient and truly scalable.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;aspect-ratio:16/9;overflow:hidden;border-radius:0;gap:0.1rem;background:var(--color-border);">
+        <div style="background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <img src="https://res.cloudinary.com/dv9ndle5u/image/upload/v1782194423/evolve-media/pic_2.jpg" alt="" style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+        </div>
+        <div style="background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <img src="https://res.cloudinary.com/dv9ndle5u/image/upload/v1782194392/evolve-media/pic_10.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+        </div>
+        <div style="background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <img src="https://res.cloudinary.com/dv9ndle5u/image/upload/v1782194448/evolve-media/pic_26.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+        </div>
+        <div style="background:#111;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <img src="https://res.cloudinary.com/dv9ndle5u/image/upload/v1782194403/evolve-media/pic_14.png" alt="" style="max-width:100%;max-height:100%;object-fit:contain;display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services List -->
+  <section class="section">
+    <div class="container">
+      <span class="section-label">(a.) SERVICES</span>
+    </div>
+    <div class="services-list">
+      <div class="service-detail">
+        <span class="service-detail-number">1.</span>
+        <h3>Web Dev</h3>
+        <p>Custom website development, front-end and back-end engineering, performance optimization, and scalable architecture tailored to your brand&rsquo;s needs.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">2.</span>
+        <h3>Web Design</h3>
+        <p>Responsive, conversion-driven website design with clean aesthetics, intuitive navigation, and brand-aligned visual storytelling.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">3.</span>
+        <h3>Product Design</h3>
+        <p>End-to-end product design from concept to launch, focusing on user needs, market fit, and functional elegance.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">4.</span>
+        <h3>Packaging Design</h3>
+        <p>Distinctive packaging solutions that communicate brand identity, enhance shelf presence, and create memorable unboxing experiences.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">5.</span>
+        <h3>UI/UX</h3>
+        <p>User interface and experience design rooted in research, usability testing, and interaction design principles for seamless digital experiences.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">6.</span>
+        <h3>Prototyping</h3>
+        <p>Rapid prototyping and iterative testing to validate ideas, refine interactions, and accelerate the design-to-development pipeline.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">7.</span>
+        <h3>Photography</h3>
+        <p>Professional product, editorial, and campaign photography that captures brand essence and elevates visual storytelling.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">8.</span>
+        <h3>Cinematography</h3>
+        <p>Cinematic video production for brand films, commercials, and content that drives engagement and emotional connection.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">9.</span>
+        <h3>Video Editing</h3>
+        <p>Expert video post-production including editing, color grading, motion graphics, and sound design for polished final deliverables.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">10.</span>
+        <h3>Graphic Design</h3>
+        <p>Visual identity systems, brand collateral, typography, and layout design for print and digital media.</p>
+      </div>
+      <div class="service-detail">
+        <span class="service-detail-number">11.</span>
+        <h3>Poster Designs</h3>
+        <p>Compelling poster and print designs that command attention, communicate messages clearly, and reinforce brand recognition.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;">
+        <div style="aspect-ratio:3/4;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center;">
+          <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;">
+            <source src="https://res.cloudinary.com/dv9ndle5u/video/upload/v1782194381/evolve-media/dih.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div>
+          <span class="section-label">(b.) SERVICES</span>
+          <p class="text-medium" style="margin-top:2rem;">
+            Every project begins with a close dialogue with the brands we work with.
+            We study their business models, their growth ambitions and the dynamics of
+            the markets they operate in. From there we design digital structures built
+            to perform over time, able to adapt and evolve together with the company.
+          </p>
+          <p class="text-medium" style="margin-top:2rem;">
+            Our work is not simply about building platforms, but about creating systems
+            that improve efficiency, support operations and allow brands to grow in a
+            solid and sustainable way within the digital commerce landscape.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="footer-cta">
+      Let&rsquo;s make an impact together.<br>
+      <a href="mailto:saha.rik2006@gmail.com">saha.rik2006@gmail.com</a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h4>(a.) Contact</h4>
+        <p>saha.rik2006@gmail.com</p>
+      </div>
+      <div class="footer-section">
+        <h4>(B.) Newsletter</h4>
+        <p>Get Design insights in your inbox.<br>No spam, just relevant stories.</p>
+        <form class="newsletter-form">
+          <input type="email" name="email" placeholder="Your email" required>
+          <button type="button">Subscribe</button>
+        </form>
+        <div class="form-success">Thank you! Your submission has been received!</div>
+        <div class="form-error">Oops! Something went wrong while submitting the form.</div>
+      </div>
+      <div class="footer-section">
+        <h4>(C.) Social</h4>
+        <a href="https://www.instagram.com/madeinevolve" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/madeinevolve/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>&copy; Made in Evolve S.r.l.</span>
+      <span>All rights reserved</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

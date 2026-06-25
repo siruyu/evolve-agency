@@ -59,7 +59,6 @@ npm run start    # start production server
 - Project slider with KPIs
 - Interactive service accordion
 - Marquee ticker
-- Bilingual support (EN/IT)
 - Newsletter signup
 
 ## Contact

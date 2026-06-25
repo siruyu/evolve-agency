@@ -1211,12 +1211,13 @@ body {
 
 .team-member .portfolio-link {
   display: inline-block;
-  margin-top: 0.75rem;
-  font-size: 0.85rem;
+  margin-top: 1.25rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.4);
   letter-spacing: 0.15em;
   text-decoration: none;
   transition: color 0.3s;
+  line-height: 1;
 }
 
 .team-member .portfolio-link:hover {

@@ -1,6 +1,6 @@
 # Evolve — Direction, Tech, Marketing
 
-**Ecommerce Innovation Agency for Visionary Brands**
+**A creative Innovation Agency**
 
 Evolve is a multi-disciplinary creative agency that blends brand direction, advanced technology, and performance marketing into one connected approach. We build authentic connections between brands and people — where every experience, physical or digital, becomes part of the same story.
 

@@ -3,7 +3,7 @@ import './globals.css'; // Global styles
 
 export const metadata: Metadata = {
   title: 'Evolve | Direction, Tech, Marketing',
-  description: 'Ecommerce Innovation Agency for Visionary Brands — Brand Direction, Advanced Tech, Performance Marketing',
+  description: 'A creative Innovation Agency — Brand Direction, Advanced Tech, Performance Marketing',
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
